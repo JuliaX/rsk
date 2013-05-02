@@ -1,6 +1,6 @@
 # testRSK.jl
 
-require("rsk.jl")
+require("rsk2.jl")
 require("plancherelPartition.jl")
 function testRSK(n, samples, k)
 

@@ -1,10 +1,17 @@
-n = 4^6;
-samples = 5000;
-
-# randperm
-tic()
-A  = zeros(samples,n)
-for i=1:samples
-    A[i,:] = randperm(n)
+reload("rsk2.jl")
+n=4^6
+m =1000
+#Calculate a bunch of random permutations
+perms = zeros(m,n)
+for i=1:m
+    #perms[i,:] =
+    randperm(n)
 end
-toc()
+
+#test rsk2.jl
+#tic()
+#for i=1:m
+#    P = rsk2(perms[i,:])
+#end
+#toc()
+
