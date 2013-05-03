@@ -1,4 +1,4 @@
-reload("rsk2.jl")
+#require("rsk2.jl")
 n=4^6
 m =1000
 #Calculate a bunch of random permutations
