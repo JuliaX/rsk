@@ -1,5 +1,5 @@
 # plancherelPartition.jl
-require("rsk.jl")
+require("rsk2.jl")
 require("randperm2.jl")
 function plancherelPartition(n)
 ## Input: n...size of partition
@@ -7,18 +7,18 @@ function plancherelPartition(n)
 p = randperm2(n)
 P = rsk2(p)
 (u,v) = size(P)
-lam = zeros(u)
-for i=1:u
-    if isnan(P[i,1])
+lam = zeros(v)
+for i=1:v
+    if isnan(P[1,i])
         lam = lam[1:i-1]
         break
     end
-    for j=1:v
-        if isnan(P[i,j])
+    for j=1:u
+        if isnan(P[j,i])
             break
         end
         lam[i] += 1
     end
 end
-return (P,lam)
+return lam
 end
