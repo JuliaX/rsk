@@ -1,11 +1,11 @@
 # plancherelPartition.jl
-require("rsk2.jl")
+require("rsk.jl")
 require("randperm2.jl")
 function plancherelPartition(n)
 ## Input: n...size of partition
 ## Output: lam...random partition of n(with plancherel measure)
 p = randperm2(n)
-P = rsk2(p)
+P = rsk(p)
 (u,v) = size(P)
 lam = zeros(v)
 for i=1:v
